@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-03-12",
+  "templates": [
+    {
+      "id": "events-landing-page",
+      "label": "Events Landing Page",
+      "description": "Landing page for events such as World Forums, conferences and live experiences.",
+      "tags": ["events", "landing-page"],
+      "file": "events-landing-page.json"
+    }
+  ]
+}

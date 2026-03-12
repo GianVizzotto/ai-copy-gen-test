@@ -1,0 +1,256 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-03-12",
+  "id": "events-landing-page",
+  "label": "Events Landing Page",
+  "description": "Landing page for events such as World Forums, conferences and live experiences.",
+  "tags": ["events", "landing-page"],
+  "aemResourceType": "ds/components/structure/page_arc_world_forums",
+  "components": [
+
+    {
+      "id": "arc-secondary-nav",
+      "label": "Secondary Navigation",
+      "aemResourceType": "ds/components/arc/arc-secondary-nav/v1/arc-secondary-nav",
+      "storybookId": "components-organisms-arc-secondary-nav--arc-secondary-nav",
+      "order": 1,
+      "description": "Navigation bar anchored below the global header, providing in-page or section-level navigation links.",
+      "agentScope": "partial",
+      "note": "Agent generates nav item labels only. URLs and structure are set by the publisher.",
+      "fields": [
+        {
+          "key": "items[].text",
+          "label": "Nav Item Label",
+          "type": "string",
+          "required": true,
+          "agentGenerated": true,
+          "maxLength": 30,
+          "hint": "Short, scannable label. No punctuation. Examples: Overview, Agenda, Speakers, Register."
+        },
+        {
+          "key": "items[].href",
+          "label": "Nav Item URL",
+          "type": "url",
+          "required": true,
+          "agentGenerated": false,
+          "hint": "Set by publisher. Agent does not generate URLs."
+        }
+      ]
+    },
+
+    {
+      "id": "arc-marquee-large",
+      "label": "Hero Marquee",
+      "aemResourceType": "ds/components/arc/arc-marquee-large/v1/arc-marquee-large",
+      "storybookId": "components-organisms-arc-marquee-large--arc-marquee-large",
+      "order": 2,
+      "description": "Full-width hero component placed at the top of the page. Sets the visual and editorial tone of the page. Contains a heading block with title and primary CTA, plus a visual asset (image or video).",
+      "agentScope": "full",
+      "note": "Agent generates all text fields. Image and video assets are provided by the publisher.",
+      "fields": [
+        {
+          "key": "arcHeadingBlockHeading.text",
+          "label": "Hero Title",
+          "type": "string",
+          "required": true,
+          "agentGenerated": true,
+          "maxLength": 80,
+          "hint": "Impact statement that communicates the core value or theme of the event. No full stop. Active voice. Example: Where the world's technology leaders converge."
+        },
+        {
+          "key": "arcHeadingBlockPrimaryButton.text",
+          "label": "Primary CTA Label",
+          "type": "string",
+          "required": true,
+          "agentGenerated": true,
+          "maxLength": 30,
+          "hint": "Action-oriented label. No filler words. Examples: Register Now, Save Your Spot, Learn More."
+        },
+        {
+          "key": "arcHeadingBlockPrimaryButton.href",
+          "label": "Primary CTA URL",
+          "type": "url",
+          "required": true,
+          "agentGenerated": false,
+          "hint": "Set by publisher. Agent does not generate URLs."
+        }
+      ]
+    },
+
+    {
+      "id": "arc-heading-block",
+      "label": "Section Heading Block",
+      "aemResourceType": "ds/components/arc/arc-heading-block/v1/arc-heading-block",
+      "storybookId": "components-molecules-arc-heading-block--acr-heading-block-demo",
+      "order": 3,
+      "description": "Standalone heading block used to introduce a page section. Typically contains a title and optional supporting text.",
+      "agentScope": "full",
+      "note": "Fields to be completed after Storybook review.",
+      "fields": [
+        {
+          "key": "text",
+          "label": "Section Title",
+          "type": "string",
+          "required": true,
+          "agentGenerated": true,
+          "maxLength": 60,
+          "hint": "Clear and direct section title. No punctuation at the end."
+        }
+      ]
+    },
+
+    {
+      "id": "arc-universal-group",
+      "label": "Universal Group",
+      "aemResourceType": "ds/components/arc/arc-universal-group/v1/arc-universal-group",
+      "storybookId": "components-organisms-arc-universal-group--arc-universal-group-demo",
+      "order": 4,
+      "description": "Flexible container organism used to group and lay out cards or other components in a structured grid.",
+      "agentScope": "none",
+      "note": "Structural container — agent does not generate content for this component directly. Content is generated for the components nested inside it (e.g. arc-card).",
+      "fields": []
+    },
+
+    {
+      "id": "arc-card",
+      "label": "Card",
+      "aemResourceType": "ds/components/arc/arc-card/v1/arc-card",
+      "storybookId": "components-molecules-arc-card--arc-card-demo",
+      "order": 5,
+      "description": "Content card used to highlight a speaker, topic, session or key information item. Typically used in groups inside arc-universal-group.",
+      "agentScope": "full",
+      "note": "Fields to be completed after Storybook review. Agent generates title and description per card instance.",
+      "fields": [
+        {
+          "key": "heading",
+          "label": "Card Title",
+          "type": "string",
+          "required": true,
+          "agentGenerated": true,
+          "maxLength": 60,
+          "hint": "Concise title for the card item. No punctuation at the end."
+        },
+        {
+          "key": "description",
+          "label": "Card Description",
+          "type": "string",
+          "required": false,
+          "agentGenerated": true,
+          "maxLength": 120,
+          "hint": "One to two sentences providing context or detail. Plain language."
+        }
+      ]
+    },
+
+    {
+      "id": "arc-content-block",
+      "label": "Content Block",
+      "aemResourceType": "ds/components/arc/arc-content-block/v1/arc-content-block",
+      "storybookId": "components-molecules-arc-content-block--arc-content-block-demo",
+      "order": 6,
+      "description": "Rich text block used for body copy, supporting text or descriptive paragraphs within a section.",
+      "agentScope": "full",
+      "note": "Fields to be completed after Storybook review.",
+      "fields": [
+        {
+          "key": "text",
+          "label": "Body Copy",
+          "type": "richtext",
+          "required": true,
+          "agentGenerated": true,
+          "maxLength": 400,
+          "hint": "Informative paragraph aligned with the section context. Conversational but professional tone. No bullet points unless explicitly needed."
+        }
+      ]
+    }
+
+  ],
+
+  "intakeFields": {
+    "universal": [
+      {
+        "key": "intent",
+        "label": "Page Intent",
+        "type": "string",
+        "required": true,
+        "source": "detected_or_asked",
+        "hint": "What is the primary goal of this page? e.g. Drive registrations, Inform attendees, Recap event results."
+      },
+      {
+        "key": "persona",
+        "label": "Target Persona",
+        "type": "select",
+        "required": true,
+        "source": "detected_or_asked",
+        "hint": "Select from the predefined persona list."
+      },
+      {
+        "key": "locale",
+        "label": "Locale / Language",
+        "type": "select",
+        "required": true,
+        "source": "detected_or_asked",
+        "options": ["en-us", "pt-br", "de", "fr", "ja", "es"],
+        "hint": "Target language and region for content generation."
+      }
+    ],
+    "templateSpecific": [
+      {
+        "key": "eventName",
+        "label": "Event Name",
+        "type": "string",
+        "required": true,
+        "source": "detected_or_asked",
+        "hint": "Full official name of the event. e.g. ServiceNow World Forum Amsterdam 2026."
+      },
+      {
+        "key": "eventDate",
+        "label": "Event Date",
+        "type": "string",
+        "required": true,
+        "source": "detected_or_asked",
+        "hint": "Date or date range of the event. e.g. June 10–11, 2026."
+      },
+      {
+        "key": "eventLocation",
+        "label": "Event Location",
+        "type": "string",
+        "required": true,
+        "source": "detected_or_asked",
+        "hint": "City and venue. e.g. Amsterdam, RAI Convention Centre."
+      },
+      {
+        "key": "eventTheme",
+        "label": "Event Theme or Key Message",
+        "type": "string",
+        "required": true,
+        "source": "detected_or_asked",
+        "hint": "The central theme or positioning of the event. e.g. Accelerating AI-driven transformation."
+      },
+      {
+        "key": "targetAudience",
+        "label": "Target Audience",
+        "type": "string",
+        "required": false,
+        "source": "detected_or_asked",
+        "hint": "Who is this event for? e.g. CIOs, IT leaders, HR executives."
+      },
+      {
+        "key": "keyTopics",
+        "label": "Key Topics or Tracks",
+        "type": "string",
+        "required": false,
+        "source": "detected_or_asked",
+        "hint": "Main subjects or session tracks. e.g. AI, ITSM, Employee Experience, Security."
+      },
+      {
+        "key": "registrationUrl",
+        "label": "Registration URL",
+        "type": "url",
+        "required": false,
+        "source": "asked",
+        "hint": "URL for the registration CTA. Provided by publisher if available."
+      }
+    ]
+  }
+}
