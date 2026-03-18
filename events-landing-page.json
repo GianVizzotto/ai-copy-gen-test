@@ -19,21 +19,13 @@
       "note": "Agent generates nav item labels only. URLs and structure are set by the publisher.",
       "fields": [
         {
-          "key": "items[].text",
-          "label": "Nav Item Label",
+          "key": "navItems",
+          "label": "Nav Item Labels",
           "type": "string",
           "required": true,
           "agentGenerated": true,
-          "maxLength": 30,
-          "hint": "Short, scannable label. No punctuation. Examples: Overview, Agenda, Speakers, Register."
-        },
-        {
-          "key": "items[].href",
-          "label": "Nav Item URL",
-          "type": "url",
-          "required": true,
-          "agentGenerated": false,
-          "hint": "Set by publisher. Agent does not generate URLs."
+          "maxLength": 120,
+          "hint": "Comma-separated list of short, scannable nav labels. No punctuation. 4 to 6 items. Examples: Overview, Agenda, Speakers, Register, FAQ, Location"
         }
       ]
     },
